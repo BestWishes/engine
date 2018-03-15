@@ -1,20 +1,21 @@
-package com.wishes.config;
+package com.wishes.mobile;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-@EnableConfigServer
-@EnableAutoConfiguration
-@Configuration
 @EnableDiscoveryClient
-public class ConfigApplication {
+@Configuration
+@EnableAutoConfiguration
+@SpringBootApplication
+public class MobileApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfigApplication.class, args);
+
+        SpringApplication.run(MobileApplication.class,args);
+
     }
+
 }

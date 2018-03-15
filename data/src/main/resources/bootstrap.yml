@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: data-service
+  cloud:
+    config:
+      label: master
+      discovery:
+        enabled: true
+        service-id: config-server
+      profile: dev
+    consul:
+      port: 8500
+      host: 127.0.0.1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/engine
+    password: root
+    username: root
+    driver-class-name: com.mysql.jdbc.Driver
+server:
+  port: 10301
