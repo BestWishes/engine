@@ -1,16 +1,18 @@
 spring:
   application:
     name: data-service
-  cloud:
-    config:
-      label: master
-      discovery:
-        enabled: true
-        service-id: config-server
-      profile: dev
+#  cloud:
+#    config:
+#      label: master
+#      discovery:
+#        enabled: true
+#        service-id: config-server
+#      profile: dev
     consul:
       port: 8500
       host: 127.0.0.1
+  profiles:
+    active: dev
   jpa:
     hibernate:
       ddl-auto: update

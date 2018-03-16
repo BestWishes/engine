@@ -3,6 +3,7 @@ package com.wishes.data.controller;
 import com.wishes.data.entity.User;
 import com.wishes.data.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/user")
 public class UserController {
 
+//    @Value("${name}")
+    private String name="jjj";
     @Autowired
     private UserRepository userRepository;
 
@@ -18,7 +21,7 @@ public class UserController {
 
         userRepository.save(user);
 
-        return "success !";
+        return "success !" + name;
 
     }
 
